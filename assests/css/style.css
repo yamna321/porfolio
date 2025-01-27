@@ -269,7 +269,62 @@ form{
    }
    /* responsive code */
 
-   @media (max-width: 768px) {
+  /* Responsive code */
+
+/* Adjust for smaller screens (e.g., tablets) */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 3%;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+        margin-left: 0;
+    }
+
+    .home-content {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+
+    .about-img {
+        width: 50vw;
+    }
+
+    .about-content {
+        font-size: 1rem;
+        margin-left: 5%;
+    }
+
+    .services {
+        padding: 5%;
+    }
+
+    .service-box {
+        flex: 1 1 calc(100% - 2rem);
+        margin: 1rem 0;
+    }
+
+    form {
+        font-size: 1.2rem;
+        height: auto;
+        padding: 20px;
+    }
+
+    input {
+        width: 80%;
+    }
+}
+
+/* Responsive code */
+@media (max-width: 768px) {
     #menu-icon {
         display: block;
     }
@@ -277,16 +332,92 @@ form{
     .navbar {
         display: none;
         flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        top: 4rem;
-        right: 1rem;
-        background: #d64161;
-        padding: 1rem;
-        border-radius: 8px;
+        width: 100%;
+        background-color: #d64161;
     }
 
-    .navbar.active {
-        display: flex;
+    .navbar a {
+        margin: 1rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 80vw;
+        margin-left: 0;
+    }
+
+    .home-content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 60vw;
+        margin-right: 0;
+    }
+
+    .about-content {
+        margin-left: 0;
+    }
+
+    .services {
+        padding: 2rem;
+    }
+
+    .service-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .footer {
+        height: auto;
+        padding: 2rem 0;
+    }
+}
+
+/* Adjust for extra small screens (e.g., very small phones) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+
+    .home-content {
+        font-size: 0.9rem;
+    }
+
+    .multiple-text {
+        font-size: 1.5rem;
+    }
+
+    .services h1,
+    .contact h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        font-size: 1rem;
     }
 }
